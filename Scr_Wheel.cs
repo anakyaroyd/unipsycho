@@ -13,7 +13,7 @@ public class Scr_Wheel : MonoBehaviour
     Scr_InputController input;
 
     public float PedalInput { get; set; }
-    public float LeanFBInput { get; set; }
+    public float TiltFBInput { get; set; }
 
     [Header("Movement Variables")]
 
@@ -43,7 +43,7 @@ public class Scr_Wheel : MonoBehaviour
         _pedal = PedalInput;
 
            // Call lean forward/backwards input value from Input Controller
-        LeanFBInput = input.LeanFBInput;
+        TiltFBInput = input.TiltFBInput;
 
            // Expose speed of wheel spin in inspector via serialized field above
         wheelVel = _rb.angularVelocity.magnitude; 
@@ -51,11 +51,11 @@ public class Scr_Wheel : MonoBehaviour
 
     private void FixedUpdate()  {
             // If player leans unicycle fork, add to acceleration (less if leaning backwards)
-        if(LeanFBInput > 0f) {
-            _lean = Mathf.Min((_lean + (LeanFBInput * .2f)), .5f);
+        if(TiltFBInput > 0f) {
+            _lean = Mathf.Min((_lean + (TiltFBInput * .2f)), .5f);
         }
         else{
-            _lean = LeanFBInput * .2f;
+            _lean = TiltFBInput * .2f;
         }
 
             // If player presses pedal (value on axis is not equal to zero)
