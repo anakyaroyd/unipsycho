@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588e185dd653c412ebed82eca97d6f80, type: 3}
+  m_Name: CP_03
+  m_EditorClassIdentifier: 
+  Group00: 
+  cPList: 9
+  cPState: 2
+  cPGroup: 2
+  cPPos: {x: 15.900001, y: -3.9, z: 12.75}
+  cPRot: {x: 0, y: 0, z: 0, w: 0}
+  currentColor:
+    serializedVersion: 2
+    rgba: 4291559589
